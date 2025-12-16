@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Publicar Nueva Oferta</title>
+
+<head>
+<meta charset="UTF-8">
+<title>Publicar Nueva Oferta</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+</head>
+
+<body>
+<h2>EcoGrid Connect</h2>
+<h3>Publicar Nueva Oferta de Energía</h3>
+
+<form action="../Backend/guardarOferta.php" method="POST">
+
+  <label>Cantidad de energía (kWh)</label><br>
+  <input type="number" name="kwh" step="0.01" max="999.99" required><br><br>
+
+  <label>Precio por kWh (MXN)</label><br>
+  <input type="number" name="precio" step="0.01" max="999.99" required><br><br>
+
+  <label>Horario de inicio</label><br>
+  <input type="time" name="inicio" required><br><br>
+
+  <label>Horario de fin</label><br>
+  <input type="time" name="fin" required><br><br>
+
+  <!-- Simulaciones -->
+  <input type="hidden" name="id_prosumidor" value="1">
+  <input type="hidden" name="id_consumidor" value="3">
+  <button type="submit">Publicar Oferta</button>
+</form>
+
+<hr>
+
+<a href="../Backend/panelDeOfertas.php">Ir al Panel de Ofertas</a>
+
+</body>
+</html>
